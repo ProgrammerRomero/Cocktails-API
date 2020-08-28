@@ -4,18 +4,51 @@
 <div class="row m-5">
   <div class="col">
 
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 25rem;">
+      <img [src]="cocktailDataImage" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-header bg-dark text-center">{{cocktailDataTitle}}</h5>
+        <br>
+        <p class="card-text text-center">Category</p>
+        <p class="card-text text-center">{{cocktailDataCategory}}</p>
       </div>
+
+      <div class="card p-3">
+        <blockquote class="blockquote mb-0 card-body text-dark text-center">
+          <p>{{cocktailDataInstructions}}</p>
+          <footer class="blockquote-footer">
+            <small class="text-muted">
+              Thanks to thecocktaildb.com API <cite title="Source Title">Rmero Julian</cite>
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+
+
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">{{cocktailDataIngredients}}</li>
         <li class="list-group-item">Dapibus ac facilisis in</li>
         <li class="list-group-item">Vestibulum at eros</li>
       </ul>
     </div>
 
+  </div>
+</div>
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="cocktailDataImage" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-header bg-dark card-title text-light">{{cocktailDataTitle}}</h5>
+        <p class="card-text text-center">{{cocktailDataCategory}}</p>
+        <p class="card-text text-center">{{cocktailDataInstructions}}</p>
+        <p class="card-text"><small class="text-muted">Thanks to thecocktaildb.com API</small></p>
+        <p class="card-text"><small class="text-muted">Data goten from ROMERO</small></p>
+      </div>
+    </div>
   </div>
 </div>
